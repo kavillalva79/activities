@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+        <script>
+
+            function calculate(val){
+                document.getElementById("result").value+=val;
+            }
+             
+            function cancel(){
+                document.getElementById("result").value='';
+            }
+             
+            function solve(){
+                var number = document.getElementById("result").value;
+                var total = eval(number);
+                document.getElementById("result").value = total;
+            }
+            </script>
+	</head>
+    <style>
+        
+        body {
+          background-color: #e68435;
+          margin: auto;
+
+        }
+    
+        .navbar {
+          background-color: #e22e2e;
+          border-bottom: 1px solid #3b2121;
+          padding: 10px;
+        }
+    
+        .navbar-brand {
+          font-size: 18px;
+          font-weight: bold;
+        }
+    
+        .calculator-container {
+          margin: 0 auto;
+          max-width: 200px; /* Adjust the width as desired */
+          padding: 20px;
+          background-color: #e49f0b;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        #result {
+          border-top-left-radius:10px;
+          border-top-right-radius:10px;
+          width: 80%;
+          height: 50px;
+          font-size: 30px;
+        }
+    
+        button {
+          padding: 20px;
+          font-size: 20px;
+          margin: 5px;
+          width: 60px; /* Adjust the width as desired */
+        }
+      </style>
+    
+
+<body>
+    <center>
+	</nav>
+	<div class="col-md-3"></div>
+	<div class="col-md-6 well">
+		<h3 class="text-primary">JavaScript - Simple Basic Calculator</h3>
+			<div class="col-md-6 well" style="background-color:rgb(255, 60, 0); width:30%;border-radius:10px; padding-bottom: 30px;">
+
+			<form name="calculator"> 
+				<input type="text" id="result" style="width:98%; height:50px; font-size:30px;" READONLY/>
+				<br /><br />
+				<button type="button" onclick="calculate('1')" style="padding:25px; margin-left:10px; font-size:20px;">1</button>
+				<button type="button" onclick="calculate('2')" style="padding:25px; font-size:20px;" >2</button>
+				<button type="button" onclick="calculate('3')" style="padding:25px; font-size:20px;">3</button>
+				<button type="button" onclick="calculate('+')" style="padding-top:25px; padding-bottom:25px; padding-right:26px; padding-left:26; font-size:20px;">+</button>
+				<br /><br />
+				<button type="button" onclick="calculate('4')"  style="padding:25px; margin-left:10px; font-size:20px;">4</button>
+				<button type="button" onclick="calculate('5')"  style="padding:25px; font-size:20px;">5</button>
+				<button type="button" onclick="calculate('6')"  style="padding:25px; font-size:20px;">6</button>
+				<button type="button" onclick="calculate('-')"  style="padding-top:25px; padding-bottom:25px; padding-right:26px; padding-left:26px; font-size:20px;">-</button>
+				<br /><br />
+				<button type="button" onclick="calculate('7')"  style="padding:25px; margin-left:10px; font-size:20px;">7</button>
+				<button type="button" onclick="calculate('8')"  style="padding:25px; font-size:20px;">8</button>
+				<button type="button" onclick="calculate('9')"  style="padding:25px; font-size:20px;">9</button>
+				<button type="button" onclick="calculate('*')"  style="padding-top:25px; padding-bottom:25px; padding-right:26px; padding-left:26px; font-size:20px;">x</button>
+				<br /><br />
+				<button type="button" onclick="cancel();"  style="padding:25px; margin-left:10px; font-size:20px;">C</button>
+				<button type="button" onclick="calculate('0')"  style="padding:25px; font-size:20px;">0</button>
+				<button type="button" onclick="solve()"  style="padding:25px; font-size:20px;">=</button>
+				<button type="button" onclick="calculate('/')"  style="padding-top:25px; padding-bottom:25px; padding-right:26px; padding-left:26px; font-size:20px;">/</button>
+			</form>
+        </center>
+
+
+	</div>
+
